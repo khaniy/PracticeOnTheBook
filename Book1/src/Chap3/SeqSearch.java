@@ -7,8 +7,17 @@ public class SeqSearch {
             if(i==n)
                 return -1;
             if(dat[i] == key)
-                return 1;
+                return i;
             i++;
         }
+    }
+
+    static int seqSearch2(int[] dat, int n, int key){
+        for (int i=0; i<dat.length; i++){
+            if(dat[i] == key){
+                return i;
+            }
+        }
+        return -1;
     }
 }
