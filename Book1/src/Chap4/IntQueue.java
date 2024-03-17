@@ -93,6 +93,19 @@ public class IntQueue {
         }
     }
 
+    public int search(int x){
+        if(isEmpty())
+            return 0;
+        else {
+            for(int i=0; i<num; i++){
+                int idx = (front + i)% capacity;
+                if(que[idx]==x)
+                    return i+1;
+            }
+        }
+        return 0;
+    }
+
 
 
 }
